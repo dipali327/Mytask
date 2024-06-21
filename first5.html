@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+
+            .para1{
+                display:inline;
+                position:relative;
+                width:100%;
+            }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div class="para1">
+            <span>
+                <select id="ol">
+                    <option>Item1</option>
+                    <option>Item2</option>
+                    <option>Item3</option>
+                </select>
+            <p id="para"></p>
+            </span>
+        </div>
+
+             <button onclick="fun()">click me</button>
+             <script type="text/javascript">
+                function fun()
+                {
+                    var name;
+                    name=document.getElementById("name").value;
+                var para=document.getElementById("para");
+                var ol=document.getElementById("ol");
+                var txt="";
+                
+                
+            
+                }
+
+                ol.addEventlistener("change",function()
+                {
+txt=this.value;
+  
+para.innerHTML="you selected"+txt;
+            para.style.color="red";
+            para.style.fontsize="30px";
+            para.style.backgroundColor="yellow";
+            para.style.width="300px";
+
+                });
+            </script>
+    </body>
+</html>
