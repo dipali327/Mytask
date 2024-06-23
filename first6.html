@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        Name:<input type="text" id="input" name="name" required minlength="8" maxlength="20">
+        <button id="but">click me</button>
+        <p id="demo"></p>
+        <script type="text/javascript">
+
+            var input=document.getElementById("input");
+            var para=document.getElementById("demo");
+            var but=document.getElementById("but");
+
+    but.addEventListener("click",function()
+    {
+        //var str=/^[a-zA-Z0-9+*%#@]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+        //var str=/^([a-z]+){3}+([A-Z]+){3}+([0-9]+){2}+{[%#@_-]+){3}$/
+
+        var str=/^[0-9]{10}$/
+
+        if(str.test(input.value) )
+        {
+            para.innerHTML="valid input";
+        }
+        else{
+            para.innerHTML="Invalid";
+        }
+    });
+        </script>
+    </body>
+</html>
